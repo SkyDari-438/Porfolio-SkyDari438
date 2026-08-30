@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
 <title>SkyDari438 — Portfolio de estudiante de informática</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,10 @@
 <header>
   <nav>
     <div class="logo">SkyDari438</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </label>
     <ul>
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#estudios">Estudios</a></li>
@@ -166,8 +171,10 @@
             <span class="tag">Unity</span>
           </div>
           <p class="placeholder">Un juego corto de acción, totalmente programado y dibujado por mí. El único proyecto verdaderamente terminado de mi colección</p>
-          <div class="game-links">
+          <div class="btn btn-ghost">
             <a href="https://skydari438-dev.itch.io/sancho-sanchez" target="_blank">Enlace a Itch.io</a>
+          </div>
+          <div class="btn btn-ghost">
             <a href="https://youtu.be/wzPy4xqdHXQ" target="_blank">Enlace a Youtube</a>
           </div>
         </div>
@@ -182,8 +189,10 @@
             <span class="tag">Unity</span>
           </div>
           <p class="placeholder">Fue mi primer juego publicado, cuando aún intentaba aprender los fundamentos de la programación. Parte del arte fue generado con IA.</p>
-          <div class="game-links">
+          <div class="btn btn-ghost">
             <a href="https://github.com/SkyDari-438/Primer-Juego-Unity2D.git" target="_blank">Enlace a repositorio</a>
+          </div>
+          <div class="btn btn-ghost">
             <a href="https://youtu.be/NjrJSNWbiig" target="_blank">Enlace a Youtube</a>
           </div>
         </div>
@@ -199,7 +208,7 @@
             <span class="tag">Unity</span>
           </div>
           <p class="placeholder">Un juego estilo bullet hell en el que compras mejoras conforme avanzan los niveles, que escalan como bola de nieve, cada vez más y más.</p>
-          <div class="game-links">
+          <div class="btn btn-ghost">
             <a href="https://youtu.be/b_CX183hEW8" target="_blank">Enlace a Youtube</a>
           </div>
         </div>
@@ -223,15 +232,34 @@
 <br>
         <p class="placeholder">Si por el contrario quieres verme hablar un poco de mi trayectoria, ¡puedes entrar en este vídeo!</p>
 
-    <div class="contact-links">
-      <a class="btn btn-ghost" href="https://youtu.be/djMQ1L8S_8g" target="_blank">Youtube</a>
-    </div>
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/djMQ1L8S_8g"
+    title="Vídeo de trayectoria de Darío Rodríguez Gelo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+<div class="contact-links">
+  <a class="btn btn-ghost" href="https://youtu.be/djMQ1L8S_8g" target="_blank">Youtube</a>
+</div>
  
 </main>
  
 <footer>
   © 2026 Darío Rodríguez Gelo.
 </footer>
+
+<script>
+  document.querySelectorAll('nav ul a').forEach(function(link){
+    link.addEventListener('click', function(){
+      var toggle = document.getElementById('nav-toggle');
+      if (toggle) toggle.checked = false;
+    });
+  });
+</script>
  
 </body>
 </html>
